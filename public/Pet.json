@@ -1,0 +1,179 @@
+[
+    {
+      "id": 1,
+      "PetImage": "https://i.ibb.co/Rzw2ZSc/cat1.jpg",
+      "PetName": "Fluffy",
+      "PetLocation": "Suburbia Pet Haven",
+      "PetAge": 2,
+      "PetCategory": "Cat",
+      "ShortDescription": "Adorable fluffy cat",
+      "LongDescription": "Fluffy is a playful and affectionate cat with a soft fur coat. She enjoys chasing toys and cuddling with her human friends.",
+      "DateOfAdvertisement": "2023-11-26"
+    },
+    {
+      "id": 2,
+      "PetImage": "https://i.ibb.co/0qybQwf/cat2.jpg",
+      "PetName": "Whiskers",
+      "PetLocation": "Downtown Feline Friends",
+      "PetAge": 3,
+      "PetCategory": "Cat",
+      "ShortDescription": "Curious cat with long whiskers",
+      "LongDescription": "Whiskers is a curious cat who loves exploring new places. His long whiskers help him navigate his surroundings with ease.",
+      "DateOfAdvertisement": "2023-11-27"
+    },
+    {
+      "id": 3,
+      "PetImage": "https://i.ibb.co/1vVH7qx/cat3.jpg",
+      "PetName": "Mittens",
+      "PetLocation": "Urban Kitty Kingdom",
+      "PetAge": 4,
+      "PetCategory": "Cat",
+      "ShortDescription": "Cute cat with mittens-like paws",
+      "LongDescription": "Mittens is an adorable cat with distinct mittens-like markings on her paws. She enjoys sunbathing and playing with string toys.",
+      "DateOfAdvertisement": "2023-11-28"
+    },
+    {
+      "id": 4,
+      "PetImage": "https://i.ibb.co/gZzVSMB/cat4.jpg",
+      "PetName": "Shadow",
+      "PetLocation": "Metropolitan Cat Sanctuary",
+      "PetAge": 5,
+      "PetCategory": "Cat",
+      "ShortDescription": "Mysterious black cat",
+      "LongDescription": "Shadow is a mysterious black cat with captivating yellow eyes. She is independent and enjoys spending time exploring the quiet corners of the house.",
+      "DateOfAdvertisement": "2023-11-29"
+    },
+    {
+      "id": 5,
+      "PetImage": "https://i.ibb.co/yk0F4H9/dog1.jpg",
+      "PetName": "Buddy",
+      "PetLocation": "Friendly Paws Park",
+      "PetAge": 2,
+      "PetCategory": "Dog",
+      "ShortDescription": "Friendly golden retriever",
+      "LongDescription": "Buddy is a friendly golden retriever who loves to play fetch and go for long walks. He is great with kids and other pets.",
+      "DateOfAdvertisement": "2023-11-30"
+    },
+    {
+      "id": 6,
+      "PetImage": "https://i.ibb.co/8PnTG11/dog2.jpg",
+      "PetName": "Charlie",
+      "PetLocation": "Active Canine Acres",
+      "PetAge": 3,
+      "PetCategory": "Dog",
+      "ShortDescription": "Energetic border collie",
+      "LongDescription": "Charlie is an energetic border collie with a love for agility training. He is intelligent, loyal, and always ready for an adventure.",
+      "DateOfAdvertisement": "2023-12-01"
+    },
+    {
+      "id": 7,
+      "PetImage": "https://i.ibb.co/61XRMkY/dog3.jpg",
+      "PetName": "Luna",
+      "PetLocation": "Siberian Husky Haven",
+      "PetAge": 1,
+      "PetCategory": "Dog",
+      "ShortDescription": "Playful Siberian husky",
+      "LongDescription": "Luna is a playful Siberian husky with striking blue eyes. She enjoys playing in the snow and is known for her friendly and outgoing nature.",
+      "DateOfAdvertisement": "2023-12-02"
+    },
+    {
+      "id": 8,
+      "PetImage": "https://i.ibb.co/1KYXwQ9/dog4.jpg",
+      "PetName": "Max",
+      "PetLocation": "Gentle Giant Retreat",
+      "PetAge": 4,
+      "PetCategory": "Dog",
+      "ShortDescription": "Gentle giant mastiff",
+      "LongDescription": "Max is a gentle giant mastiff who is calm and loving. Despite his large size, he is great with children and makes an excellent family pet.",
+      "DateOfAdvertisement": "2023-12-03"
+    },
+    {
+      "id": 9,
+      "PetImage": "https://i.ibb.co/Bt8JF81/rabbit1.jpg",
+      "PetName": "Cotton",
+      "PetLocation": "Fluffy Bunny Burrow",
+      "PetAge": 1,
+      "PetCategory": "Rabbit",
+      "ShortDescription": "Fluffy white rabbit",
+      "LongDescription": "Cotton is a fluffy white rabbit with a sweet and gentle demeanor. She enjoys hopping around and nibbling on fresh vegetables.",
+      "DateOfAdvertisement": "2023-12-04"
+    },
+    {
+      "id": 10,
+      "PetImage": "https://i.ibb.co/PDgZ9hx/rabbit2.jpg",
+      "PetName": "Thumper",
+      "PetLocation": "Lively Rabbit Retreat",
+      "PetAge": 2,
+      "PetCategory": "Rabbit",
+      "ShortDescription": "Playful gray rabbit",
+      "LongDescription": "Thumper is a playful gray rabbit with a curious nature. He loves exploring his surroundings and is litter-trained for indoor living.",
+      "DateOfAdvertisement": "2023-12-05"
+    },
+    {
+      "id": 11,
+      "PetImage": "https://i.ibb.co/y60131M/rabbit3.jpg",
+      "PetName": "Hazel",
+      "PetLocation": "Friendly Bunny Haven",
+      "PetAge": 3,
+      "PetCategory": "Rabbit",
+      "ShortDescription": "Adorable brown rabbit",
+      "LongDescription": "Hazel is an adorable brown rabbit with floppy ears. She enjoys being petted and is known for her gentle and friendly personality.",
+      "DateOfAdvertisement": "2023-12-06"
+    },
+    {
+      "id": 12,
+      "PetImage": "https://i.ibb.co/gmsnKcb/rabbit4.jpg",
+      "PetName": "Oreo",
+      "PetLocation": "Bouncy Bunny Bungalow",
+      "PetAge": 1,
+      "PetCategory": "Rabbit",
+      "ShortDescription": "Black and white bunny",
+      "LongDescription": "Oreo is a black and white bunny with a playful spirit. He loves hopping around and is always excited to receive treats from his human friends.",
+      "DateOfAdvertisement": "2023-12-07"
+    },
+    {
+      "id": 13,
+      "PetImage": "https://i.ibb.co/C9QKbyX/fish1.jpg",
+      "PetName": "Bubbles",
+      "PetLocation": "Aquatic Bliss Aquarium",
+      "PetAge": 1,
+      "PetCategory": "Fish",
+      "ShortDescription": "Colorful betta fish",
+      "LongDescription": "Bubbles is a colorful betta fish with vibrant fins. He thrives in a well-maintained aquarium and enjoys swimming through his favorite decorations.",
+      "DateOfAdvertisement": "2023-12-08"
+    },
+    {
+      "id": 14,
+      "PetImage": "https://i.ibb.co/n6VY0zr/fish2.jpg",
+      "PetName": "Splash",
+      "PetLocation": "Underwater Wonders Tank",
+      "PetAge": 2,
+      "PetCategory": "Fish",
+      "ShortDescription": "Energetic goldfish",
+      "LongDescription": "Splash is an energetic goldfish with a shiny golden color. He enjoys darting around the aquarium and is easy to care for.",
+      "DateOfAdvertisement": "2023-12-09"
+    },
+    {
+      "id": 15,
+      "PetImage": "https://i.ibb.co/RNVfQKP/fish3.jpg",
+      "PetName": "Neptune",
+      "PetLocation": "Aqua Majesty Aquarium",
+      "PetAge": 3,
+      "PetCategory": "Fish",
+      "ShortDescription": "Majestic angelfish",
+      "LongDescription": "Neptune is a majestic angelfish with long, flowing fins. He adds a touch of elegance to any aquarium and is compatible with a variety of tankmates.",
+      "DateOfAdvertisement": "2023-12-10"
+    },
+    {
+      "id": 16,
+      "PetImage": "https://i.ibb.co/zrmBHK1/fish4.jpg",
+      "PetName": "Coral",
+      "PetLocation": "Reef Paradise Aquarium",
+      "PetAge": 1,
+      "PetCategory": "Fish",
+      "ShortDescription": "Beautiful coral reef fish",
+      "LongDescription": "Coral is a beautiful coral reef fish with vibrant colors. She thrives in a well-established reef aquarium and is known for her graceful swimming.",
+      "DateOfAdvertisement": "2023-12-11"
+    }
+  ]
+  

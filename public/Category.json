@@ -1,0 +1,22 @@
+[
+{
+    "id": 1,
+    "PetCategory": "Cat",
+    "PetImage": "https://i.ibb.co/QMKcgwz/cat.jpg"
+  },
+  {
+    "id": 2,
+    "PetCategory": "Dog",
+    "PetImage": "https://i.ibb.co/khJYPbr/dog.jpg"
+  },
+  {
+    "id": 3,
+    "PetCategory": "Rabbit",
+    "PetImage": "https://i.ibb.co/1Kt6zmV/rabbit.jpg"
+  },
+  {
+    "id": 4,
+    "PetCategory": "Fish",
+    "PetImage": "https://i.ibb.co/8NxnzRD/fish.jpg"
+  }
+]
