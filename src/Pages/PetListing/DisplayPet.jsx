@@ -19,7 +19,7 @@ const DisplayPet = ({ user }) => {
                         
                         
                         <div className="flex gap-2">
-                        <Link to={`/updateBook/${id}`}><button className="btn bg-green-600 hover:bg-green-700">View Details</button></Link>
+                        <Link to={`/displayPet/${id}`}><button className="btn bg-green-600 hover:bg-green-700">View Details</button></Link>
                         
                         </div>
                         
