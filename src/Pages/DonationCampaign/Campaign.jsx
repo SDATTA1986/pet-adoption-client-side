@@ -1,50 +1,34 @@
+
+
 import { useEffect, useState } from "react";
 
-import DisplayPet from "./DisplayPet";
+// import DisplayPet from "./DisplayPet";
 import { FixedSizeGrid as Grid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
-import Select from 'react-select';
+// import Select from 'react-select';
+import DisplayCampaign from "./DisplayCampaign";
+import useDonation from "../../Components/hooks/useDonation";
 
-const options = [
-  { value: 'Cat', label: 'Cat' },
-  { value: 'Dog', label: 'Dog' },
-  { value: 'Rabbit', label: 'Rabbit' },
-  { value: 'Fish', label: 'Fish' },
-];
 
-const PetListing = () => {
-    const [allPets, setAllPets] = useState([]);
-    const [searchTerm, setSearchTerm] = useState("");
-    const [selectedOption, setSelectedOption] = useState(null);
-    useEffect(() => {
-        fetch('http://localhost:5000/pet')
-            .then(res => res.json())
-            .then(data => {
-                const sortedPets = data.sort((a, b) => new Date(b.DateOfAdvertisement) - new Date(a.DateOfAdvertisement));
-                setAllPets(sortedPets);
-            }
-            )
-    }, [])
-    const handleSearch = (event) => {
-        const searchTerm = event.target.value.toLowerCase();
-        setSearchTerm(searchTerm);
-      };
-      const handleCategoryChange = (selectedOption) => {
-        setSelectedOption(selectedOption);
-      };
-      const filteredPets = allPets.filter(pet => {
-        if (searchTerm) {
-          return pet.PetName.toLowerCase().includes(searchTerm);
-        }
-        if (selectedOption) {
-          return pet.PetCategory.includes(selectedOption.value);
-        }
-        return true; // No filtering if neither search term nor category is selected
-      });
+
+const Campaign = () => {
+    // const [allCampaigns, setAllCampaigns] = useState([]);
+    const [campaigns]=useDonation();
+    const allCampaigns=campaigns.sort((a, b) => new Date(b.DateOfCampaign) - new Date(a.DateOfCampaign));
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/campaign')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             const sortedCampaigns = data.sort((a, b) => new Date(b.DateOfCampaign) - new Date(a.DateOfCampaign));
+    //             setAllCampaigns(sortedCampaigns);
+    //         }
+    //         )
+    // }, [])
+    
     return (
         <div className="min-h-screen">
            <div className="flex justify-center items-center">
-           <input onChange={handleSearch} type="text" placeholder="Search by Name" className="input input-bordered input-primary w-2/3 my-4" />
+           
             {/* <select className="select select-secondary w-1/3">
                 <option disabled selected>Pick by category</option>
                 <option>Cat</option>
@@ -53,22 +37,22 @@ const PetListing = () => {
                 <option>Fish</option>
                 
             </select> */}
-            <Select className=" w-1/3 " 
+            {/* <Select className=" w-1/3 " 
         defaultValue={selectedOption}
         onChange={handleCategoryChange}
         options={options}
         
-      />
+      /> */}
            </div>
-            {allPets.length === 0 ? (
+            {allCampaigns.length === 0 ? (
                 <p>Loading...</p>
             ) : (
                 <AutoSizer>
                     {({ height, width }) => {
                         const columnCount = 3;
-                        const rowCount = Math.ceil(allPets.length / columnCount);
+                        const rowCount = Math.ceil(allCampaigns.length / columnCount);
                         const columnWidth = width / columnCount;
-                        const rowHeight = 300;
+                        const rowHeight = 400;
 
                         return (
                             <Grid
@@ -82,12 +66,12 @@ const PetListing = () => {
                             >
                                 {({ columnIndex, rowIndex, style }) => {
                                     const index = rowIndex * columnCount + columnIndex;
-                                    if (index >= filteredPets.length) {
+                                    if (index >= allCampaigns.length) {
                                         return null;
                                     }
                                     return (
-                                        <div key={filteredPets[index].id} style={style}>
-                      <DisplayPet user={filteredPets[index]} />
+                                        <div key={allCampaigns[index].id} style={style}>
+                      <DisplayCampaign user={allCampaigns[index]} />
                     </div>
                                     );
                                 }}
@@ -100,4 +84,4 @@ const PetListing = () => {
     );
 };
 
-export default PetListing;
+export default Campaign;
