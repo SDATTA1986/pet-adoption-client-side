@@ -10,6 +10,7 @@ import PetDetails from "../Pages/PetListing/PetDetails";
 import PrivateRoute from "./PrivateRoute";
 import Campaign from "../Pages/DonationCampaign/Campaign";
 import DonationDetails from "../Pages/DonationCampaign/DonationDetails";
+import Register from "../Pages/Shared/Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -43,6 +44,11 @@ export const router = createBrowserRouter([
       element: <PrivateRoute><DonationDetails></DonationDetails></PrivateRoute>,
       
   },
+  {
+    path: '/register',
+    element: <Register></Register>
+
+}
     ]
   },
 ]);

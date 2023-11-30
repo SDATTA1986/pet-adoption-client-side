@@ -1,6 +1,6 @@
 
 
-import { useEffect, useState } from "react";
+
 
 // import DisplayPet from "./DisplayPet";
 import { FixedSizeGrid as Grid } from "react-window";

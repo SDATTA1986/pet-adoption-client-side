@@ -5,12 +5,16 @@ import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import useDonation from "../../Components/hooks/useDonation";
 import Payment from "./Payment/Payment";
+import SectionTitle from "../../Components/SectionTitle/SectionTitle";
+import PaymentHistory from "./Payment/PaymentHistory";
+import DisplayCampaign from "./DisplayCampaign";
 
         
 
 const DonationDetails = () => {
     const { id } = useParams();
     console.log(id);
+    // const [campaigns]=useDonation();
     // const [allDonations, setAllDonations] = useState([]);
     // useEffect(() => {
     //     fetch('http://localhost:5000/Donation')
@@ -27,6 +31,8 @@ const DonationDetails = () => {
     console.log(singleDonation);
     const { user } = useContext(AuthContext);
     const {PetName,maxDonationAmount,donatedAmount,DateOfCampaign } = singleDonation || {};
+    const remainingCampaign=allDonations.filter(Donation=>Donation.id!==parseInt(id));
+    console.log(remainingCampaign);
     
     
     // const button = document.getElementById("myButton");
@@ -134,9 +140,8 @@ const DonationDetails = () => {
                         
                         
                         <p className="py-2">Already Donated Amount: <span className="text-2xl font-bold">{donatedAmount}</span></p>
-                        {
-                            donatedAmount && <Payment donatedAmount={donatedAmount}></Payment>
-                        }
+                        
+                        
                         <div className="flex gap-2">
                             <button id="myButton" className="btn bg-green-600 hover:bg-green-700" onClick={() => document.getElementById('my_modal_1').showModal()}
                             
@@ -145,7 +150,7 @@ const DonationDetails = () => {
                                 <div className="modal-box">
                                     {/* <h3 className="font-bold text-lg">Hello!</h3>
                                     <p className="py-4">Press ESC key or click the button below to close</p> */}
-                                    <div className="px-6 py-6 lg:px-8">
+                                    {/* <div className="px-6 py-6 lg:px-8">
                                         
                                         <h3 className="mb-4 text-xl font-medium text-gray-900 dark:text-white">Fill Up The Form</h3>
                                         <form  className="space-y-6" action="#">
@@ -166,7 +171,9 @@ const DonationDetails = () => {
                                             </div>
                                             
                                         </form>
-                                    </div>
+                                    </div> */}
+                                    <SectionTitle heading={"Fill up the details"}></SectionTitle>
+                                    <Payment singleDonation={singleDonation}></Payment>
                                     <div className="modal-action"> 
                                         <form method="dialog">
                                             {/* if there is a button in form, it will close the modal */}
@@ -176,6 +183,22 @@ const DonationDetails = () => {
                                 </div>
                             </dialog>
                             {/* <Link to={`/updateProduct/${_id}`}><button className="btn  bg-green-600 hover:bg-green-700">Read</button></Link> */}
+                        </div>
+
+                        {
+                            donatedAmount && <SectionTitle heading={"Donation Details"}></SectionTitle>
+                        }
+                        {
+                            donatedAmount && <PaymentHistory></PaymentHistory>
+                        }
+                        <div>
+                            <SectionTitle heading={"Recommended Donation Section"}></SectionTitle>
+                            <div className="grid grid-cols-3 gap-2">
+                            {
+                                remainingCampaign.slice(0,3).map((singleCampaign,index)=><DisplayCampaign key={index} user={singleCampaign}></DisplayCampaign>)
+                            }
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
