@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 
 
-import {FaGoogle} from 'react-icons/fa';
+import {FaGithub, FaGoogle} from 'react-icons/fa';
 
 
 import { AuthContext } from "../../../providers/AuthProvider";
@@ -13,7 +13,7 @@ import Swal from "sweetalert2";
 
 
 const Login = () => {
-    const {signIn,createGoogleLogin}=useContext(AuthContext);
+    const {signIn,createGoogleLogin,createGithubLogin}=useContext(AuthContext);
     const location=useLocation();
     const navigate=useNavigate();
     
@@ -47,11 +47,46 @@ const Login = () => {
     const handleGoogleLogin=()=>{
         createGoogleLogin()
         .then(()=>{
-            
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "You have successfully logged in!",
+                showConfirmButton: false,
+                timer: 1500
+              });
             navigate(location?.state?location.state:'/');
         })
         .catch(error=>{
             console.log(error.message);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: `${error.message}`,
+                
+              });
+        })
+    }
+
+    const handleGithubLogin=()=>{
+        createGithubLogin()
+        .then(()=>{
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "You have successfully logged in!",
+                showConfirmButton: false,
+                timer: 1500
+              });
+            navigate(location?.state?location.state:'/');
+        })
+        .catch(error=>{
+            console.log(error.message);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: `${error.message}`,
+                
+              });
         })
     }
     return (
@@ -62,6 +97,13 @@ const Login = () => {
             <button onClick={handleGoogleLogin} className="btn bg-green-600 hover:bg-green-700 text-xl font-light text-white flex items-center justify-center mx-auto mb-10 w-1/3">
                 <FaGoogle className=""></FaGoogle>
                  Google
+            </button>
+            <hr className="w-[500px] mx-auto"></hr>
+            <p className="text-center">Or</p>
+            <hr className="w-[500px] mx-auto mb-4"></hr>
+            <button onClick={handleGithubLogin} className="btn bg-green-600 hover:bg-green-700 text-xl font-light text-white flex items-center justify-center mx-auto mb-10 w-1/3">
+                <FaGithub className=""></FaGithub>
+                 Github
             </button>
             <hr className="w-[500px] mx-auto"></hr>
             <p className="text-center">Or</p>
