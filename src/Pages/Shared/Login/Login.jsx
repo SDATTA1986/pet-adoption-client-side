@@ -10,6 +10,7 @@ import {FaGithub, FaGoogle} from 'react-icons/fa';
 
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import axiosSecure from "../../../Components/hooks/useAxiosSecure";
 
 
 const Login = () => {
@@ -46,7 +47,14 @@ const Login = () => {
     }
     const handleGoogleLogin=()=>{
         createGoogleLogin()
-        .then(()=>{
+        .then((result)=>{
+            console.log(result.user);
+            const userInfo={
+                email:result.user?.email,
+                name:result.user?.displayName,
+                role: Boolean(0)
+            }
+            axiosSecure.post('/users',userInfo)
             Swal.fire({
                 position: "top-end",
                 icon: "success",

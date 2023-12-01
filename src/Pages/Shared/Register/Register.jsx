@@ -94,15 +94,26 @@ const Register = () => {
 
                 upProfile(Name, Photo)
                     .then(() => {
-                        navigate(location?.state ? location.state : '/');
-                        e.target.reset();
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: "You have successfully logged in!",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
+                        const userInfo={
+                            name:Name,
+                            email:email
+                        }
+                        axiosSecure.post('/users',userInfo)
+                        .then(res=>{
+                            if(res.data.insertedId){
+                                console.log('user added to the database');
+                                navigate(location?.state ? location.state : '/');
+                                e.target.reset();
+                                Swal.fire({
+                                    position: "top-end",
+                                    icon: "success",
+                                    title: "You have successfully logged in!",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                            }
+                        })
+                       
                     })
                     .catch()
             })
