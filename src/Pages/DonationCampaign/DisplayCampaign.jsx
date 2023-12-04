@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const DisplayCampaign = ({ user }) => {
-    const { id,PetImage,PetName,maxDonationAmount,donatedAmount,DateOfCreation,LastDonationDate } = user || {};
+    const { _id,PetImage,PetName,maxDonationAmount,donatedAmount,DateOfCreation,LastDonationDate } = user || {};
     
     return (
         <div className="mr-2">
@@ -21,7 +21,7 @@ const DisplayCampaign = ({ user }) => {
                         
                         
                         <div className="flex gap-2">
-                        <Link to={`/displayCampaign/${id}`}><button className="btn bg-green-600 hover:bg-green-700">View Details</button></Link>
+                        <Link to={`/displayCampaign/${_id}`}><button className="btn bg-green-600 hover:bg-green-700">View Details</button></Link>
                         
                         </div>
                         

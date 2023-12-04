@@ -28,10 +28,10 @@ const DonationDetails = () => {
     // }, [])
     const [allDonations]=useDonation();
     console.log(allDonations);
-    const singleDonation = allDonations.find(Donation => Donation.id === parseInt(id));
+    const singleDonation = allDonations.find(Donation => Donation._id === (id));
     console.log(singleDonation);
     const { user } = useContext(AuthContext);
-    const {PetName,maxDonationAmount,donatedAmount,DateOfCampaign } = singleDonation || {};
+    const {PetName,maxDonationAmount,donatedAmount,DateOfCreation } = singleDonation || {};
     const remainingCampaign=allDonations.filter(Donation=>Donation.id!==parseInt(id));
     console.log(remainingCampaign);
     
@@ -135,7 +135,7 @@ const DonationDetails = () => {
                     
                     <div>
                         <h1 className="text-2xl font-bold">Campaign Name:{PetName}</h1>
-                        <p className="py-2">Date of Advertisement: <span className="text-2xl font-bold">{DateOfCampaign}</span></p>
+                        <p className="py-2">Date of Advertisement: <span className="text-2xl font-bold">{DateOfCreation}</span></p>
 
                         <p className="py-2">Maximum Donation Amount <span className="text-2xl font-bold">{maxDonationAmount}</span></p>
                         
