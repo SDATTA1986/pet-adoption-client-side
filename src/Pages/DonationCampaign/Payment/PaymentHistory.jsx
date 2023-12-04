@@ -4,7 +4,7 @@ import useAuth from "../../../Components/hooks/useAuth";
 import useAxiosSecure from "../../../Components/hooks/useAxiosSecure";
 
 
-const PaymentHistory = () => {
+const PaymentHistory = ({PetName}) => {
     const axiosSecure=useAxiosSecure();
     const { user } = useAuth();
 
@@ -13,10 +13,13 @@ const PaymentHistory = () => {
         queryFn: async () => {
 
             const res = await axiosSecure.get(`/payment/${user.email}`);
+            console.log(res.data);
+            const res1=res.data.filter(selected=>selected.PetName===PetName)
             
-            return res.data;
+            return res1;
         }
     })
+    
     return (
         <div>
             <h2 className="text-3xl">Total payments:{payments.length}</h2>

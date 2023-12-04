@@ -134,7 +134,7 @@ const CheckoutForm = ({singleDonation}) => {
                 setClientSecret(res.data.clientSecret);
             });
     }, [donatedAmount]);
-
+    console.log(PetName);
     const handleSubmit = async (event) => {
         event.preventDefault();
         
@@ -161,7 +161,9 @@ const CheckoutForm = ({singleDonation}) => {
                 billing_details: {
                     email: user?.email || 'anonymous',
                     name: user?.displayName || 'anonymous'
-                }
+                    
+                },
+                
             }
         });
 
@@ -185,7 +187,8 @@ const CheckoutForm = ({singleDonation}) => {
                     date: new Date(),
                     campaignId: _id,
                     transactionId:paymentIntent.id,
-                    donatedAmount:donatedAmount
+                    donatedAmount:donatedAmount,
+                    PetName:PetName
                   }
 
                   const res=await axiosSecure.post('/payments',payment);

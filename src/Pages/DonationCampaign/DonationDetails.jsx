@@ -190,7 +190,7 @@ const DonationDetails = () => {
                             donatedAmount && <SectionTitle heading={"Donation Details"}></SectionTitle>
                         }
                         {
-                            donatedAmount && <PaymentHistory></PaymentHistory>
+                            donatedAmount && <PaymentHistory PetName={PetName}></PaymentHistory>
                         }
                         <div>
                             <SectionTitle heading={"Recommended Donation Section"}></SectionTitle>
