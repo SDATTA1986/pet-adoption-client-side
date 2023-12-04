@@ -10,7 +10,7 @@ const DisplayPet = ({ user }) => {
         <div className="mr-2">
             <div className="hero bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
-                    <img src={PetImage} className=" rounded-lg shadow-2xl" />
+                    <img src={PetImage} className="w-1/2 rounded-lg shadow-2xl" />
                     <div>
                         <h1 className="text-2xl font-bold"> Name:{PetName}</h1>
                         <p className="py-2  font-bold">Location:{PetLocation}</p>

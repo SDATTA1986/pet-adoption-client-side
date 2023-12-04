@@ -10,10 +10,13 @@ import {FaGithub, FaGoogle} from 'react-icons/fa';
 
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
-import axiosSecure from "../../../Components/hooks/useAxiosSecure";
+
+import useAxiosSecure from "../../../Components/hooks/useAxiosSecure";
+import NavBar from "../NavBar/NavBar";
 
 
 const Login = () => {
+    const axiosSecure=useAxiosSecure();
     const {signIn,createGoogleLogin,createGithubLogin}=useContext(AuthContext);
     const location=useLocation();
     const navigate=useNavigate();
@@ -99,7 +102,7 @@ const Login = () => {
     }
     return (
         <div>
-           
+           <NavBar></NavBar>
 
             <h3 className="text-3xl my-10 text-center">Login With</h3>
             <button onClick={handleGoogleLogin} className="btn bg-green-600 hover:bg-green-700 text-xl font-light text-white flex items-center justify-center mx-auto mb-10 w-1/3">

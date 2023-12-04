@@ -112,13 +112,15 @@
 
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
-import axiosSecure from "../../../Components/hooks/useAxiosSecure";
+
 import useAuth from "../../../Components/hooks/useAuth";
 import Swal from "sweetalert2";
 import usePayment from "../../../Components/hooks/usePayment";
+import useAxiosSecure from "../../../Components/hooks/useAxiosSecure";
 
 
 const CheckoutForm = ({singleDonation}) => {
+    const axiosSecure=useAxiosSecure();
     const { user } = useAuth();
     const stripe = useStripe();
     const elements = useElements();

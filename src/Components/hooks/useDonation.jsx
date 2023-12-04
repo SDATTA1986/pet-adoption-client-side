@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import axiosSecure from "./useAxiosSecure";
+
+import useAxiosSecure from "./useAxiosSecure";
 
 
 const useDonation = () => {
+    const axiosSecure=useAxiosSecure();
     const {data:campaign=[]}=useQuery({
         queryKey:['campaign'],
         queryFn: async()=>{

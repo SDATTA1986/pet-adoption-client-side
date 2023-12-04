@@ -3,6 +3,7 @@ import {  useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import NavBar from "../Shared/NavBar/NavBar";
 
         
 
@@ -119,7 +120,7 @@ const PetDetails = () => {
 
     return (
         <div>
-            
+            <NavBar></NavBar>
             <div className="hero  bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={PetImage} className=" rounded-lg shadow-2xl" />

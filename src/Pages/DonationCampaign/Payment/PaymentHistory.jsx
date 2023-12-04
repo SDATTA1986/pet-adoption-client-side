@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../Components/hooks/useAuth";
-import axiosSecure from "../../../Components/hooks/useAxiosSecure";
+
+import useAxiosSecure from "../../../Components/hooks/useAxiosSecure";
 
 
 const PaymentHistory = () => {
+    const axiosSecure=useAxiosSecure();
     const { user } = useAuth();
 
     const { data: payments=[] } = useQuery({

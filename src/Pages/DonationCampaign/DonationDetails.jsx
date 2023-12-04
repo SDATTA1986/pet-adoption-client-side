@@ -8,6 +8,7 @@ import Payment from "./Payment/Payment";
 import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 import PaymentHistory from "./Payment/PaymentHistory";
 import DisplayCampaign from "./DisplayCampaign";
+import NavBar from "../Shared/NavBar/NavBar";
 
         
 
@@ -128,7 +129,7 @@ const DonationDetails = () => {
 
     return (
         <div>
-            
+            <NavBar></NavBar>
             <div className="hero  bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     

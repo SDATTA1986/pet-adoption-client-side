@@ -1,4 +1,5 @@
 import Footer from "../../Shared/Footer/Footer";
+import NavBar from "../../Shared/NavBar/NavBar";
 import AboutUs from "../AboutUs/AboutUs";
 import CallToAction from "../CallToAction/CallToAction";
 import ContactUs from "../Contact/ContactUs";
@@ -10,6 +11,7 @@ import Slider from "../Slider/Slidfer";
 const Home = () => {
     return (
         <div>
+            <NavBar></NavBar>
             <Slider/>
             <PetsCategory></PetsCategory>
             <CallToAction></CallToAction>

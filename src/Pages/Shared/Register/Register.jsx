@@ -10,12 +10,18 @@ import { FaGoogle } from 'react-icons/fa';
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
+
 import Swal from "sweetalert2";
 import { AuthContext } from "../../../providers/AuthProvider";
-import axiosSecure from "../../../Components/hooks/useAxiosSecure";
+
+import useAxiosSecure from "../../../Components/hooks/useAxiosSecure";
+import useAxiosPublic from "../../../Components/hooks/useAxiosPublic";
+import NavBar from "../NavBar/NavBar";
 
 
 const Register = () => {
+    const axiosSecure=useAxiosSecure();
+    const axiosPublic=useAxiosPublic();
     const location = useLocation();
     const navigate = useNavigate();
     const { createUser, upProfile } = useContext(AuthContext);
@@ -31,7 +37,7 @@ const Register = () => {
         const image = e.target.image.files[0];
         console.log(image);
         const imageFile = { image: image }
-        const res = await axiosSecure.post(image_hosting_api, imageFile, {
+        const res = await axiosPublic.post(image_hosting_api, imageFile, {
             headers: {
                 'content-type': 'multipart/form-data'
             }
@@ -131,7 +137,7 @@ const Register = () => {
     }
     return (
         <div>
-            {/* <Navbar></Navbar> */}
+            <NavBar></NavBar>
 
             <div>
                 <h2 className="text-3xl my-10 text-center">Please Register</h2>

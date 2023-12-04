@@ -4,18 +4,19 @@ import { Link } from "react-router-dom";
 
 
 const DisplayCampaign = ({ user }) => {
-    const { id,PetImage,PetName,maxDonationAmount,donatedAmount,DateOfCampaign } = user || {};
+    const { id,PetImage,PetName,maxDonationAmount,donatedAmount,DateOfCreation,LastDonationDate } = user || {};
     
     return (
         <div className="mr-2">
             <div className="hero bg-base-200">
-                <div className="hero-content flex-col lg:flex-row">
-                    <img src={PetImage} className=" rounded-lg shadow-2xl" />
+                <div className="hero-content flex-col lg:flex-row ">
+                    <img src={PetImage} className=" rounded-lg shadow-2xl w-1/2" />
                     <div>
-                        <h1 className="text-2xl font-bold"> Name:{PetName}</h1>
+                        <h1 className="text-xl font-bold"> Name:{PetName}</h1>
                         <p className="py-2  font-bold">Maximum Donation Amount:{maxDonationAmount}</p>
                         <p className="py-2">Donated Amount: {donatedAmount}</p>
-                        <p className="py-2">Date of Campaign: {DateOfCampaign}</p>
+                        <p className="py-2">Date of Advertisement: {DateOfCreation}</p>
+                        <p className="py-2">Last Date for Donation: {LastDonationDate}</p>
                         
                         
                         

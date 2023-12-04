@@ -8,6 +8,7 @@ import AutoSizer from "react-virtualized-auto-sizer";
 // import Select from 'react-select';
 import DisplayCampaign from "./DisplayCampaign";
 import useDonation from "../../Components/hooks/useDonation";
+import NavBar from "../Shared/NavBar/NavBar";
 
 
 
@@ -26,6 +27,8 @@ const Campaign = () => {
     // }, [])
     
     return (
+        <>
+        <NavBar></NavBar>
         <div className="min-h-screen">
            <div className="flex justify-center items-center">
            
@@ -71,7 +74,7 @@ const Campaign = () => {
                                     }
                                     return (
                                         <div key={allCampaigns[index].id} style={style}>
-                      <DisplayCampaign user={allCampaigns[index]} />
+                      <DisplayCampaign  user={allCampaigns[index]} />
                     </div>
                                     );
                                 }}
@@ -81,6 +84,7 @@ const Campaign = () => {
                 </AutoSizer>
             )}
         </div>
+        </>
     );
 };
 

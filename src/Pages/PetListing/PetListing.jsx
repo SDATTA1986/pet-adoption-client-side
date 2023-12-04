@@ -5,6 +5,8 @@ import { FixedSizeGrid as Grid } from "react-window";
 import AutoSizer from "react-virtualized-auto-sizer";
 import Select from 'react-select';
 
+import NavBar from "../Shared/NavBar/NavBar";
+
 const options = [
   { value: 'Cat', label: 'Cat' },
   { value: 'Dog', label: 'Dog' },
@@ -42,6 +44,8 @@ const PetListing = () => {
         return true; // No filtering if neither search term nor category is selected
       });
     return (
+        <>
+        <NavBar></NavBar>
         <div className="min-h-screen">
            <div className="flex justify-center items-center">
            <input onChange={handleSearch} type="text" placeholder="Search by Name" className="input input-bordered input-primary w-2/3 my-4" />
@@ -97,6 +101,7 @@ const PetListing = () => {
                 </AutoSizer>
             )}
         </div>
+        </>
     );
 };
 

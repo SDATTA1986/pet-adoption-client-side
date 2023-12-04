@@ -1,9 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import axiosSecure from "./useAxiosSecure";
+
 import useAuth from "./useAuth";
+import useAxiosSecure from "./useAxiosSecure";
 
 
 const usePayment = () => {
+    const axiosSecure=useAxiosSecure();
     const {user}=useAuth();
     const {refetch,data:payments=[]}=useQuery({
         queryKey:['payments'],
