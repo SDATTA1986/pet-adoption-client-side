@@ -17,7 +17,7 @@ const Campaign = () => {
     const [campaigns]=useDonation();
     const allCampaigns=campaigns.sort((a, b) => new Date(b.DateOfCampaign) - new Date(a.DateOfCampaign));
     // useEffect(() => {
-    //     fetch('http://localhost:5000/campaign')
+    //     fetch('https://pet-adoption-server-side-iota.vercel.app/campaign')
     //         .then(res => res.json())
     //         .then(data => {
     //             const sortedCampaigns = data.sort((a, b) => new Date(b.DateOfCampaign) - new Date(a.DateOfCampaign));

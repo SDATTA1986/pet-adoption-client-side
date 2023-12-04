@@ -6,7 +6,7 @@ import Category from "../../Shared/Category/Category";
 const PetsCategory = () => {
     const [categories,setCategories]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/category')
+        fetch('https://pet-adoption-server-side-iota.vercel.app/category')
         .then(res=>res.json())
         .then(data=>setCategories(data))
     },[])

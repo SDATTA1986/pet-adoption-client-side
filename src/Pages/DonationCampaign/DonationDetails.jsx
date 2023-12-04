@@ -18,7 +18,7 @@ const DonationDetails = () => {
     // const [campaigns]=useDonation();
     // const [allDonations, setAllDonations] = useState([]);
     // useEffect(() => {
-    //     fetch('http://localhost:5000/Donation')
+    //     fetch('https://pet-adoption-server-side-iota.vercel.app/Donation')
     //         .then(res => res.json())
     //         .then(data => {
     //             console.log(data);
@@ -100,7 +100,7 @@ const DonationDetails = () => {
     //     };
     //     console.log(myData);
         
-    //     fetch("http://localhost:5000/userDetails", {
+    //     fetch("https://pet-adoption-server-side-iota.vercel.app/userDetails", {
     //         method: "POST",
     //         headers: {
     //           "Content-Type": "application/json",

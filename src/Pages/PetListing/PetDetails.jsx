@@ -12,7 +12,7 @@ const PetDetails = () => {
     console.log(id);
     const [allPets, setAllPets] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/pet')
+        fetch('https://pet-adoption-server-side-iota.vercel.app/pet')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -91,7 +91,7 @@ const PetDetails = () => {
         };
         console.log(myData);
         
-        fetch("http://localhost:5000/userDetails", {
+        fetch("https://pet-adoption-server-side-iota.vercel.app/userDetails", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

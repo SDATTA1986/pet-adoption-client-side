@@ -6,6 +6,7 @@ import AutoSizer from "react-virtualized-auto-sizer";
 import Select from 'react-select';
 
 import NavBar from "../Shared/NavBar/NavBar";
+import { useParams } from "react-router-dom";
 
 const options = [
   { value: 'Cat', label: 'Cat' },
@@ -19,7 +20,7 @@ const PetListing = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedOption, setSelectedOption] = useState(null);
     useEffect(() => {
-        fetch('http://localhost:5000/pet')
+        fetch('https://pet-adoption-server-side-iota.vercel.app/pet')
             .then(res => res.json())
             .then(data => {
                 const sortedPets = data.sort((a, b) => new Date(b.DateOfAdvertisement) - new Date(a.DateOfAdvertisement));
@@ -27,6 +28,10 @@ const PetListing = () => {
             }
             )
     }, [])
+    const { name } = useParams();
+    console.log(name);
+    const selectedCategory=allPets.filter(singleCategory => singleCategory.PetCategory === (name));
+    console.log(selectedCategory);
     const handleSearch = (event) => {
         const searchTerm = event.target.value.toLowerCase();
         setSearchTerm(searchTerm);

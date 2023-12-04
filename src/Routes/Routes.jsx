@@ -18,6 +18,7 @@ import MyPet from "../Pages/Dashboard/MyPet/MyPet";
 
 import UpdatePet from "../Pages/Dashboard/UpdatePet/UpdatePet";
 import CreateCampaign from "../Pages/DonationCampaign/CreateCampaign";
+import SearchCategory from "../Pages/Shared/Category/SearchCategory";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,12 @@ export const router = createBrowserRouter([
         path: '/PetListing',
         element: <PetListing></PetListing>
       },
+      {
+        path: '/category/:name',
+        element: <SearchCategory></SearchCategory>,
+        loader: () => fetch('https://pet-adoption-server-side-iota.vercel.app/Pet')
+        
+    },
       {
         path: '/login',
         element: <Login></Login>
@@ -61,7 +68,7 @@ export const router = createBrowserRouter([
         
         path:'UpdatePet/:id',
         element:<PrivateRoute><UpdatePet></UpdatePet></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/Pet/${params.id}`)
+        loader:({params})=>fetch(`https://pet-adoption-server-side-iota.vercel.app/Pet/${params.id}`)
       
     }
     ]
@@ -78,7 +85,7 @@ export const router = createBrowserRouter([
       {
         path:'MyPet',
         element:<PrivateRoute><MyPet></MyPet></PrivateRoute>,
-        loader: ()=>fetch('http://localhost:5000/pet')
+        loader: ()=>fetch('https://pet-adoption-server-side-iota.vercel.app/pet')
       },
       {
         path:'createCampaign',
