@@ -55,7 +55,8 @@ const Login = () => {
             const userInfo={
                 email:result.user?.email,
                 name:result.user?.displayName,
-                role: Boolean(0)
+                role: Boolean(0),
+                photoURL: result.user?.photoURL
             }
             axiosSecure.post('/users',userInfo)
             Swal.fire({
@@ -80,7 +81,15 @@ const Login = () => {
 
     const handleGithubLogin=()=>{
         createGithubLogin()
-        .then(()=>{
+        .then((result)=>{
+            console.log(result.user);
+            const userInfo={
+                email:result.user?.email,
+                name:result.user?.displayName,
+                role: Boolean(0),
+                photoURL: result.user?.photoURL
+            }
+            axiosSecure.post('/users',userInfo)
             Swal.fire({
                 position: "top-end",
                 icon: "success",

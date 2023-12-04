@@ -19,6 +19,7 @@ import MyPet from "../Pages/Dashboard/MyPet/MyPet";
 import UpdatePet from "../Pages/Dashboard/UpdatePet/UpdatePet";
 import CreateCampaign from "../Pages/DonationCampaign/CreateCampaign";
 import SearchCategory from "../Pages/Shared/Category/SearchCategory";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 
 export const router = createBrowserRouter([
   {
@@ -91,6 +92,10 @@ export const router = createBrowserRouter([
         path:'createCampaign',
         element:<PrivateRoute><CreateCampaign></CreateCampaign></PrivateRoute>
       },
+      {
+        path:'users',
+        element:<AllUsers></AllUsers>
+      }
     ]
   }
 ]);

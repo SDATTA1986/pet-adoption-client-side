@@ -102,11 +102,13 @@ const Register = () => {
                     .then(() => {
                         const userInfo={
                             name:Name,
-                            email:email
+                            email:email,
+                            photoURL:Photo,
+                            role:Boolean(0)
                         }
                         axiosSecure.post('/users',userInfo)
                         .then(res=>{
-                            if(res.data.insertedId){
+                           {
                                 console.log('user added to the database');
                                 navigate(location?.state ? location.state : '/');
                                 e.target.reset();
