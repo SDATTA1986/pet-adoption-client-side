@@ -8,9 +8,10 @@ import { FaDonate, FaEdit, FaUser } from "react-icons/fa";
 import { BiSolidDonateHeart } from "react-icons/bi";
 import { GrUpdate } from "react-icons/gr";
 import { useEffect, useState } from 'react';
+import useAdmin from "../Components/hooks/useAdmin";
 
 const Dashboard = () => {
-   const isAdmin=true;
+    const [isAdmin] = useAdmin();
     return (
         <div>
             <NavBar></NavBar>

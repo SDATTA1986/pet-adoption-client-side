@@ -9,7 +9,7 @@ const AboutUs = () => {
   <div className="hero-content flex-col lg:flex-row-reverse ">
     <div className="text-center w-1/2 ">
       <h1 className="text-5xl font-bold  ">How the Website <br/>Works</h1>
-      <p className="py-6">This website has two types of users: one is normal user and another is admin. Normal user once logged in, will see all the pets available for adoption and all the donation campaigns that are going on. If they want, either they can adopt a pet or donate to a existing campaign. The normal user will have a seperate dashboard from admin. If the user wants, he/she can add a pet or create a new campaign for other users.</p>
+      <p className="py-6">This website has two types of users: one is normal user and another is admin. Normal user once logged in, will see all the pets available for adoption and all the donation campaigns that are going on. If they want, either they can adopt a pet or donate to a existing campaign. The normal user will have a seperate dashboard from admin. If the user wants, he/she can add a pet or create a new campaign for other users. The admin can see all the users in the dashboard and the admin has only the right to make any other user Admin.</p>
     </div>
     <div className="text-center border-r-4 pr-4 w-1/2">
     <h1 className="text-5xl font-bold">Why this website was made</h1>
