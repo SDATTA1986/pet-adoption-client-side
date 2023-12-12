@@ -1,6 +1,6 @@
 
 
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 import { MdAddCircleOutline } from "react-icons/md";
 import { FaCartPlus } from "react-icons/fa6";
@@ -63,14 +63,15 @@ const DashboardLayout = () => {
                       </li>
                       <li>
                       
-                    <NavLink ><FaCartPlus />All Pets</NavLink>
+                    <NavLink to="/dashboard/AllPets"><FaCartPlus />All Pets</NavLink>
                     </li>
                     <li>
                       
-                    <NavLink ><FaDonate />All Donations</NavLink>
+                    <Link to="/dashboard/AllDonations"><FaDonate />All Donation Campaigns</Link>
                     </li>
+                    <div className="divider"></div>
                     <li>
-                      
+                     
                     <NavLink to="/dashboard/addPet"><MdAddCircleOutline />Add a Pet</NavLink>
                     </li>
                     <li>
@@ -79,16 +80,17 @@ const DashboardLayout = () => {
                     </li>
                     <li>
                       
-                    <NavLink to="/dashboard/MyPet"><GrUpdate />Update Pet</NavLink>
+                    {/* <NavLink to="/dashboard/MyPet"><GrUpdate />Update Pet</NavLink> */}
                     </li>
-                    <li>
-                      
-                    <NavLink to="/dashboard/request"><IoGitPullRequest />Adoption Request</NavLink>
-                    </li>
+                    
                     
                     <li>
                       
                     <NavLink to="/dashboard/createCampaign"><MdCreateNewFolder />Create Donation Campaign</NavLink>
+                    </li>
+                    <li>
+                      
+                    <NavLink to="/dashboard/request"><IoGitPullRequest />Adoption Request</NavLink>
                     </li>
                     <li>
                       
@@ -113,18 +115,19 @@ const DashboardLayout = () => {
                         
                       <NavLink to="/dashboard/MyPet"><FaCartPlus />My Added Pets</NavLink>
                       </li>
-                      <li>
+                      {/* <li>
                         
                       <NavLink to="/dashboard/MyPet"><GrUpdate />Update Pet</NavLink>
-                      </li>
-                      <li>
-                        
-                      <NavLink to="/dashboard/request"><IoGitPullRequest />Adoption Request</NavLink>
-                      </li>
+                      </li> */}
+                      
                       
                       <li>
                         
                       <NavLink to="/dashboard/createCampaign"><MdCreateNewFolder />Create Donation Campaign</NavLink>
+                      </li>
+                      <li>
+                        
+                      <NavLink to="/dashboard/request"><IoGitPullRequest />Adoption Request</NavLink>
                       </li>
                       <li>
                         

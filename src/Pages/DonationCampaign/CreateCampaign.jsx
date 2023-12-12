@@ -112,7 +112,8 @@ const CreateCampaign = () => {
                 DateOfCreation:moment().format('YYYY-MM-DD'),
                 TimeOfCreation:moment().format('h:mm:ss a'),
                 donatedAmount:0,
-                email:user.email
+                email:user.email,
+                CampaignStatus:Boolean(1)
 
                 
             }

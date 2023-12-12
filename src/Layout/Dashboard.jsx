@@ -30,8 +30,9 @@ const Dashboard = () => {
                     </li>
                     <li>
                       
-                    <NavLink to="/dashboard/AllDonations"><FaDonate />All Donations</NavLink>
+                    <NavLink to="/dashboard/AllDonations"><FaDonate />All Donation Campaigns</NavLink>
                     </li>
+                    <div className="divider"></div> 
                     <li>
                       
                     <NavLink to="/dashboard/addPet"><MdAddCircleOutline />Add a Pet</NavLink>
@@ -40,19 +41,20 @@ const Dashboard = () => {
                       
                     <NavLink to="/dashboard/MyPet"><FaCartPlus />My Added Pets</NavLink>
                     </li>
-                    <li>
+                    {/* <li>
                       
                     <NavLink to="/dashboard/MyPet"><GrUpdate />Update Pet</NavLink>
+                    </li> */}
+                    
+                    <li>
+                      
+                    <NavLink to="/dashboard/createCampaign"><MdCreateNewFolder />Create Donation Campaign</NavLink>
                     </li>
                     <li>
                       
                     <NavLink to="/dashboard/request"><IoGitPullRequest />Adoption Request</NavLink>
                     </li>
                     
-                    <li>
-                      
-                    <NavLink to="/dashboard/createCampaign"><MdCreateNewFolder />Create Donation Campaign</NavLink>
-                    </li>
                     <li>
                       
                     <NavLink to="/dashboard/myCampaign"><FaDonate />My Donation Campaigns</NavLink>
@@ -76,18 +78,19 @@ const Dashboard = () => {
                         
                       <NavLink to="/dashboard/MyPet"><FaCartPlus />My Added Pets</NavLink>
                       </li>
-                      <li>
+                      {/* <li>
                         
                       <NavLink to="/dashboard/MyPet"><GrUpdate />Update Pet</NavLink>
-                      </li>
-                      <li>
-                        
-                      <NavLink to="/dashboard/request"><IoGitPullRequest />Adoption Request</NavLink>
-                      </li>
+                      </li> */}
+                      
                       
                       <li>
                         
                       <NavLink to="/dashboard/createCampaign"><MdCreateNewFolder />Create Donation Campaign</NavLink>
+                      </li>
+                      <li>
+                        
+                      <NavLink to="/dashboard/request"><IoGitPullRequest />Adoption Request</NavLink>
                       </li>
                       <li>
                         

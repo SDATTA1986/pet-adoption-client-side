@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://github.com/Porgramming-Hero-web-course/b8a11-client-side-SDATTA1986
+	fetch = +refs/*:refs/*
+	mirror = true

@@ -20,6 +20,8 @@ import UpdatePet from "../Pages/Dashboard/UpdatePet/UpdatePet";
 import CreateCampaign from "../Pages/DonationCampaign/CreateCampaign";
 import SearchCategory from "../Pages/Shared/Category/SearchCategory";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import AllPets from "../Pages/Dashboard/AdminDashboard/AllPets/AllPets";
+import AllDonations from "../Pages/Dashboard/AdminDashboard/AllDonations/AllDonations";
 
 export const router = createBrowserRouter([
   {
@@ -72,6 +74,7 @@ export const router = createBrowserRouter([
         loader:({params})=>fetch(`https://pet-adoption-server-side-iota.vercel.app/Pet/${params.id}`)
       
     }
+      
     ]
   },
   {
@@ -89,13 +92,24 @@ export const router = createBrowserRouter([
         loader: ()=>fetch('https://pet-adoption-server-side-iota.vercel.app/pet')
       },
       {
+        path:'AllPets',
+        element:<PrivateRoute><AllPets></AllPets></PrivateRoute>,
+        
+      },
+      {
+        path:'AllDonations',
+        element:<PrivateRoute><AllDonations></AllDonations></PrivateRoute>,
+        
+      },
+      {
         path:'createCampaign',
         element:<PrivateRoute><CreateCampaign></CreateCampaign></PrivateRoute>
       },
       {
         path:'users',
         element:<AllUsers></AllUsers>
-      }
+      },
+      
     ]
   }
 ]);
