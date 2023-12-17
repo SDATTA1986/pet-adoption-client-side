@@ -3,6 +3,7 @@ import NavBar from "../../Shared/NavBar/NavBar";
 import AboutUs from "../AboutUs/AboutUs";
 import CallToAction from "../CallToAction/CallToAction";
 import ContactUs from "../Contact/ContactUs";
+import Feedback from "../Feedback/Feedback";
 import PetsCategory from "../PetsCategory/PetsCategory";
 import Services from "../Services/Services";
 import Slider from "../Slider/Slidfer";
@@ -18,6 +19,7 @@ const Home = () => {
             <AboutUs></AboutUs>
             <Services></Services>
             <ContactUs></ContactUs>
+            <Feedback></Feedback>
             <Footer></Footer>
         </div>
     );
